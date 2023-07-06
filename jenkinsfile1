@@ -1,0 +1,23 @@
+pipeline{
+ 
+  agent { label 'master' }
+
+ tools {
+    jdk 'java'
+    maven 'maven'
+
+  }
+
+
+stages {
+  stage ('Git checkout'){
+      steps{
+           git branch: 'main',
+           url: 'https://github.com/sowmyav321/helloworld-project-1.git'
+
+        }
+      }
+    }
+   
+
+}
